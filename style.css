@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 section {
     background-color: rgb(245, 245, 245);
 }
@@ -36,7 +40,7 @@ section {
 }
 
 .title {
-    font-size: 120px;
+    font-size: 100px;
     margin-bottom: 12px;
     text-align: left;
     line-height: 1;
@@ -88,14 +92,28 @@ section {
     border-radius: 50%;
 }
 
+.mail__btn {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #242424;
+    color: white;
+    margin-top: 8px;
+    
+    
+    
+}
+
 
 /* NAVIGATION
 
 */
 
 #personal {
-width: 50px;
-height: 50px;
+width: 80px;
+height: 80px;
 }
 
 nav {
