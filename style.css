@@ -101,9 +101,10 @@ section {
     background-color: #242424;
     color: white;
     margin-top: 8px;
-    
-    
-    
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+       
 }
 
 
