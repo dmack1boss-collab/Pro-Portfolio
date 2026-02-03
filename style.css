@@ -4,8 +4,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    
 }
 
+html {
+    font-size: 16px;
+}
 li {
     list-style: none;
 }
@@ -25,6 +29,9 @@ button {
 
 section {
     background-color: rgb(245, 245, 245);
+     display: flex;
+  justify-content: center;
+  padding: 64px 0; 
 }
 
 .container {
@@ -209,6 +216,7 @@ nav {
 
 .nav__link--list {
     display: flex;
+    
 }
 
 .nav__link {
@@ -403,6 +411,89 @@ header .row {
 .social__list.click {
     width: 8px;;
 }
+/* PROJECT #3
+
+*/
+
+.container__book {
+  display: flex;
+  justify-content: space-between; /* even spacing */
+  align-items: flex-start;
+  gap: 48px; /* space between books */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.book {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.book__img--wrapper {
+  width: 360px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 32px; 
+}
+
+
+.book_img {
+  width: 180px;
+  display: block;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+
+.book_ratings {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+  color: #fbbf24;
+
+}
+
+
+.book_price {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.book_price
+.book_ratings {
+    
+}
+
+.book_price--normal {
+  text-decoration: line-through;
+  color: #9ca3af;
+  margin-right: 6px;
+  opacity: 0.6;         
+  margin-right: 6px;
+  
+}
+
+
+.book_title {
+  margin-top: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container__book {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
 
 /* FOOTER 
 
