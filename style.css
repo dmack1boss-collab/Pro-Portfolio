@@ -414,12 +414,31 @@ header .row {
 /* PROJECT #3
 
 */
+.section__title {
+text-align: center;
+padding: 40px 20px;
+flex-direction: column;
+align-items: center;
+max-width: 150px;
+
+}
+.book_3 {
+    display: flex;
+}
+
+.book__btn {
+    align-items: center;
+    justify-items: center;
+    border: none;
+    
+}
+
 
 .container__book {
   display: flex;
-  justify-content: space-between; /* even spacing */
+  justify-content: space-around;
   align-items: flex-start;
-  gap: 48px; /* space between books */
+  gap: 48px; 
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -450,7 +469,9 @@ header .row {
   object-fit: contain;
   margin-bottom: 12px;
 }
+.book_3 {
 
+}
 
 .book_ratings {
   display: flex;
