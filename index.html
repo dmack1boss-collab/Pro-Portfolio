@@ -6,20 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <link rel="stylesheet" href="style.css" />
-
-    <script
-      src="https://kit.fontawesome.com/c8e4d183c2.js"
-      crossorigin="anonymous"
-    ></script>
-
+<script src="https://kit.fontawesome.com/e92efa1168.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
-    <script src="app.js" defer></script>
+<script src="index.js"defer></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "IeX856uPJs9S3lArT",
+      });
+   })();
+</script>
   </head>
 
   <body>
@@ -129,8 +132,8 @@
           Frontend Software Engineer
         </h4>
         <p class="modal__para">
-          I'm a 18 year old
-          <b class="orange">Frontend Software Engineer</b> with a strong passion
+          I'm a hardworking and disciplined
+          <b class="orange">Junior Software Developer</b> with a strong passion
           for developing websites with great
           <b class="orange">user experiences</b>
           <br />
@@ -187,19 +190,19 @@
         <form id="contact__form" onsubmit="contact(event)">
           <div class="form__item">
             <label class="form__item--label">Name</label>
-            <input class="input" name="user_name" type="text" required />
+            <input class="input" name="user_name" type="text" ></input>
           </div>
 
           <div class="form__item">
             <label class="form__item--label">Email</label>
-            <input class="input" name="user_email" type="email" required />
+            <input class="input" name="user_email" type="email" ></input>
           </div>
 
           <div class="form__item">
             <label class="form__item--label">Message</label>
-            <textarea class="input" name="message" required></textarea>
+            <textarea class="input" name="message" type="text" ></textarea>
           </div>
-
+          
           <button id="contact__submit" class="form__submit">
             Send it my way
           </button>
