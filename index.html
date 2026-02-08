@@ -26,7 +26,7 @@
   </head>
 
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmouseover="moveBackround(event)">
       <nav>
         <figure>
           <img id="personal" src="./assets/logo.png" alt="" />
@@ -116,8 +116,8 @@
     </header>
 
     <a href="#">
-      <button class="mail__btn click">
-        <i class="fa-regular fa-envelope" onclick="toggleModal()"></i>
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fa-regular fa-envelope" ></i>
       </button>
     </a>
 
@@ -202,7 +202,7 @@
             <label class="form__item--label">Message</label>
             <textarea class="input" name="message" type="text" ></textarea>
           </div>
-          
+
           <button id="contact__submit" class="form__submit">
             Send it my way
           </button>
