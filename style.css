@@ -120,6 +120,21 @@ section {
   width: 100%;
 }
 
+nav,
+.scroll, .header {
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 800ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms;
+}
+
 /* LANDING PAGE
 
 */
@@ -375,6 +390,22 @@ nav {
   transition: all 300ms ease-in;
 }
 
+#contact__form {
+  z-index: 1;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact
+ {
+  transform: translateX(0%);
+}
+
+.modal__about {
+  background-color: rgb(245, 245, 245);
+  transform: translateX(-110%);
+  
+}
+
 .modal__languages {
   display: flex;
   flex-wrap: wrap;
@@ -410,25 +441,12 @@ nav {
   width: 100%;
 }
 
-.modal--open .modal__about,
-.modal--open .modal__contact {
-  transform: translateX(0%);
-}
-
-.modal__about {
-  background-color: rgb(245, 245, 245);
-  transform: translateX(-110%);
-  transition: all 300ms ease-in;
-}
 
 .modal__contact {
   background-color: #242424;
   color: white;
   transform: translateX(110%);
-  transition: all 300ms ease-in;
-}
-
-#contact__form {
+ 
 }
 
 .modal__title {
@@ -445,11 +463,8 @@ nav {
   line-height: 1.75;
 }
 
-.form__item--label {
-  z-index: 1;
-}
 .form__item {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .form__submit {
@@ -469,39 +484,9 @@ nav {
   background-color: transparent;
 }
 
-.language__name {
-  position: absolute;
-  bottom: -10px;
-  transform: scale(0);
-  transition: all 300ms ease;
-}
-
-.modal__contact {
-  transform: translateX(110%);
-  background-color: #242424;
-  color: white;
-}
-
-.modal__title {
-  font-size: 26px;
-}
-
-.modal__sub-title {
-  margin: 12px 0 24px 0;
-  font-size: 14px;
-}
-
-.modal__para {
-  margin-bottom: 12px;
-  line-height: 1.75;
-}
-
-.modal__overlay--loading {
-  background-color: blue;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.form__submit:active {
+  border-color: #f06449;
+  color: #f06449;
 }
 
 .modal__overlay {
@@ -516,6 +501,21 @@ nav {
   z-index: -1 ;
 } 
 
+.modal__overlay--loading {
+  background-color: #242424;
+  font-size: 80px;
+
+}
+
+.modal__overlay--success {
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
+
+}
+
 .modal__overlay--visible {
   z-index: 1;
   display: flex;
@@ -523,15 +523,17 @@ nav {
 
 .fa-spinner {
   animation: spinner 750ms infinite linear;
+  
 }
 
-.modal__overlay--success {
-  background-color: #4bb543;
-  font-size: 40;
-  font-weight: 700;
-  text-align: center;
-  padding: 20px;
-  z-index: 5;
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate (360deg);
+  }
 }
 
 .modal__exit {
@@ -543,14 +545,7 @@ nav {
   z-index: 100;
 }
 
-@keyframes spinner {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate (360deg);
-  }
-}
+
 
 /* FOOTER 
 
@@ -602,6 +597,3 @@ footer {
   display: flex;
   justify-content: center;
 }
-JavaScript
-
-const toggleModal = () => document.body.classList.toggle("modal--open");

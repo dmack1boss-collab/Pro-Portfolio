@@ -1,3 +1,4 @@
+let isModalOpen = false;
 function contact(event) {
   event.preventDefault();
 }
