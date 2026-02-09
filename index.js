@@ -1,15 +1,10 @@
 let isModalOpen = false;
+
 function contact(event) {
   event.preventDefault();
-}
   const loading = document.querySelector(".modal__overlay--loading");
   const success = document.querySelector(".modal__overlay--success");
-
-  loading.classList.add("modal__overlay--visible");function contact(event) {
-  event.preventDefault();
-const loading = document.querySelector(".modal__overlay--loading");
-const success = document.querySelector(".modal__overlay--success");
-loading.classList += " modal__overlay--visible";
+  loading.classList.add("modal__overlay--visible");
 
   emailjs
     .sendForm(
@@ -18,16 +13,15 @@ loading.classList += " modal__overlay--visible";
       event.target,
       'IeX856uPJs9S3lArT'
     ).then(() => {
-  loading.classList.remove("modal__overlay--visible");
-  success.classList += " modal__overlay--visible"
-       }).catch (() => {
-        loading.classList.remove("modal__overlay--visible")
-        alert(
-            "This email service is temporarily unavailable. Please contact me directly @dmack1boss@gmail.com"
-        );
-
-       })
-    }
+      loading.classList.remove("modal__overlay--visible");
+      success.classList.add("modal__overlay--visible");
+    }).catch(() => {
+      loading.classList.remove("modal__overlay--visible");
+      alert(
+        "This email service is temporarily unavailable. Please contact me directly @dmack1boss@gmail.com"
+      );
+    });
+}
 
 function toggleModal() {
   if (isModalOpen) {
