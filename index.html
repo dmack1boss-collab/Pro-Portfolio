@@ -26,7 +26,7 @@
   </head>
 
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove= "moveBackground(event)">
       <nav>
         <figure>
           <img id="personal" src="./assets/logo.png" alt="" />
@@ -51,7 +51,7 @@
             </a>
           </li>
 
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -60,7 +60,7 @@
             </a>
           </li>
 
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -84,7 +84,7 @@
           I'm a <b class="blue">Junior Software Developer</b> with a strong
           passion for building web applications with great user experiences.
           <br />
-          Here's a bit more <b class="blue">about me.</b>
+          Here's a bit more <b class="blue click" onclick="toggleModal()">about me.</b>
         </p>
 
         <div class="social__list">
@@ -129,7 +129,7 @@
       <div class="modal__half modal__about">
         <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
         <h4 class="modal__sub-title modal__sub-title--about">
-          Frontend Software Engineer
+          Junior Software Development
         </h4>
         <p class="modal__para">
           I'm a hardworking and disciplined
@@ -217,7 +217,15 @@
         </div>
       </div>
     </div>
-
+ <img src="./assets/semi circle.svg" class="shape shape--0">
+    <img src="./assets/circle.svg" class="shape shape--1">
+    <img src="./assets/squiggly.svg" class="shape shape--2">
+    <img src="./assets/circle.svg" class="shape shape--3">
+    <img src="./assets/triangle.svg" class="shape shape--4">
+    <img src="./assets/circle.svg" class="shape shape--5">
+    <img src="./assets/squiggly.svg" class="shape shape--6">
+    <img src="./assets/circle.svg" class="shape shape--7">
+    <img src="./assets/semi circle.svg" class="shape shape--8">
     <section id="projects">
       <div class="container">
         <div class="row">
@@ -339,22 +347,22 @@
 
           <div class="footer__social--list">
             <a
-              href="#"
+              href=""
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >GitHub</a
             >
             <a
-              href="#"
+              href="#"  
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >LinkedIn</a
             >
             <a
-              href="#"
+              href="#" onclick="toggleModal()" 
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >Contact</a
             >
             <a
-              href="#"
+              href="./assets/Resume DM.pdf" target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >Resume</a
             >
